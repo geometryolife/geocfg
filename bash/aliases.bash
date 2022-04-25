@@ -11,14 +11,14 @@ alias ee='emacs'
 
 # Tmux
 alias t='tmux'
-alias tl='tmux ls'
-alias tn='tmux new -s'
-alias tt='tmux attach'
-alias ta='tmux attach -t'
-alias td='tmux detach'
+alias ta='tmux attach-session -t'
+alias td='tmux detach-client'
 alias tk='tmux kill-session -t'
-alias ts='tmux switch -t'
+alias tl='tmux ls'
+alias tn='tmux new-session -s'
 alias tr='tmux rename-session -t'
+alias ts='tmux switch-client -t'
+alias tt='tmux attach-session'
 
 
 # ░█▀▀░▀█▀░▀█▀░░░█▀█░█░░░▀█▀░█▀█░█▀▀
