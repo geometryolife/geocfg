@@ -4,3 +4,4 @@ git
 mlocate # install locate
 wget
 file # Determine type of FILEs.
+yarnpkg # @See https://stackoverflow.com/questions/53471063/yarn-error-there-are-no-scenarios-must-have-at-least-one
