@@ -1,0 +1,2 @@
+source ~/.config/shell/aliases.sh
+source ~/.config/shell/env.sh
