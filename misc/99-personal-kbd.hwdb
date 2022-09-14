@@ -1,6 +1,13 @@
-# Path /etc/udev/hwdb.d/
+# Path /etc/udev/hwdb.d/99-personal-kbd.hwdb
+# udevadm hwdb --update
+# udevadm trigger
 
 # Hasee PC
 evdev:atkbd:dmi:*
  KEYBOARD_KEY_3a=leftctrl    # bind leftctrl to capslock
  KEYBOARD_KEY_1d=capslock    # bind capslock to leftctrl
+
+# K380
+evdev:input:b0005v*
+ KEYBOARD_KEY_70039=leftctrl    # bind leftctrl to capslock
+ KEYBOARD_KEY_700e0=capslock    # bind capslock to leftctrl

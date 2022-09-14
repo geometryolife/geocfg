@@ -1,5 +1,6 @@
 alias i='cd $HOME/i'
 
+alias c='clear'
 alias l='ls --color=auto -lah'
 alias ls='ls --color=auto'
 
