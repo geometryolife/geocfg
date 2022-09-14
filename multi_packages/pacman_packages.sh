@@ -22,3 +22,4 @@ xorg
 xorg-server
 xorg-xinit
 xorg-xlsfonts
+neofetch
