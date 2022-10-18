@@ -1,4 +1,5 @@
-export EDITOR=nvim
+export EDITOR=hx
+export HELIX_RUNTIME="$HOME/i/helix/runtime"
 
 export PATH=$HOME/.local/bin:$PATH
 
