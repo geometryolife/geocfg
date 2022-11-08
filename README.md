@@ -43,9 +43,22 @@ tar xzvf nvim-linux64.tar.gz
 ./nvim-linux64/bin/nvim
 ```
 
+安装 `pynvim` 给 Neovim 提供 Python 特性：
+
+```shell
+/usr/bin/python3 -m pip install pynvim
+```
+
+检查 Neovim 的健康状况：
+
+```vim
+:checkhealth
+```
+
 #### Configuration
 
 - 我的 VimL 配置文件在 [nvim](https://github.com/geometryolife/nvim)
+  - coc 插件需要使用 `yarn`，需要安装 [Node](#Node)
 - Lua 配置 [geonv](https://github.com/geometryolife/geonv)
 
 #### 插件管理器
@@ -76,9 +89,11 @@ alias ep='export http_proxy=http://127.0.0.1:7890 && export https_proxy=https://
 alias up='unset http_proxy && unset https_proxy && unset socks5_proxy'
 ```
 
-## Git tools
+## Tools
 
 ### lazygit
+
+首先安装 [go 语言](#Go)
 
 ```shell
 git clone https://github.com/jesseduffield/lazygit.git
@@ -86,11 +101,33 @@ cd lazygit
 go install
 ```
 
+### ranger
+
+Use the package manager of your operating system to install ranger. You can also install ranger through PyPI: `pip install ranger-fm`.
+
 ## Language
 
 ### Go
 
 - 下载 [go](https://go.dev/) 并放在安装路径：
+
+```shell
+~/prog
+```
+
+### Rust
+
+- [Rust](https://www.rust-lang.org/)
+
+- [Rust for WSL](https://www.rust-lang.org/)
+
+```shell
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+### Node
+
+- 下载 [node](https://nodejs.org/en/download/) 并放在安装路径：
 
 ```shell
 ~/prog
