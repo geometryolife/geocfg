@@ -1,0 +1,11 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    {
+        "key": "f12",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        "key": "Ctrl+F12",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+]

@@ -1,15 +1,4 @@
-# Ignore everything (not recursively)
-/*
-/*/
-
-# ... but these:
-!alacritty/
-!bash/bash
-!i3/
-!LICENSE
-!misc/
-!multi_packages/
-!neofetch/
-!README.md
-!shell/
-!tmux/
+coc/
+helix/
+lazygit/
+nvim/
