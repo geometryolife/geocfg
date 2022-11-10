@@ -2,6 +2,8 @@ alias i='cd $HOME/i'
 
 alias c='clear'
 alias l='ls --color=auto -lah'
+alias la='ls -A'
+alias ll='ls -CF'
 alias ls='ls --color=auto'
 
 # Proxy
