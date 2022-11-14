@@ -132,3 +132,31 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```shell
 ~/prog
 ```
+
+#### npm
+
+- [Node Package Manager](https://en.wikipedia.org/wiki/Npm_(software))
+- [NPM 使用介绍](https://www.runoob.com/nodejs/nodejs-npm.html)
+
+```shell
+# 安装依赖到（当前的执行命令）本地的 node_modules 目录
+npm install
+
+# 全局安装
+npm install -g
+```
+
+使用 `npm` 全局安装依赖，会将包安装到 `node` 安装目录中，例如：
+
+```shell
+# 我的 node 安装的位置
+/home/joe/prog/node
+
+# 全局安装的依赖位置
+/home/joe/prog/node/lib/node_modules
+```
+
+- 使用 `--production` 选项标志或设置 `NODE_ENV` 环境变量为 `production` 时，不安装 `devDependencies` 中的模块。
+- 在 `NODE_ENV` 被设置为 `production` 的情况下，可以使用 `--production=false` 来同时安装 `dependencies` 和 `devDependencies` 中的模块。
+
+- `npm run` 从包的 `scripts` 对象运行任意命令。
