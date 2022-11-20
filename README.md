@@ -177,3 +177,15 @@ source <ENV_DIR>/bin/activate
 # 退出
 deactivate
 ```
+
+#### Poetry 依赖管理工具
+
+Python packaging and dependency management made easy.
+
+- [Homepage](https://python-poetry.org/)
+- [Repository](https://github.com/python-poetry/poetry)
+
+```shell
+# 安装
+curl -sSL https://install.python-poetry.org | python3 -
+```
