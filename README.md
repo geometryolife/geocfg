@@ -160,3 +160,20 @@ npm install -g
 - 在 `NODE_ENV` 被设置为 `production` 的情况下，可以使用 `--production=false` 来同时安装 `dependencies` 和 `devDependencies` 中的模块。
 
 - `npm run` 从包的 `scripts` 对象运行任意命令。
+
+### Python
+
+- [Homepage](https://www.python.org/)
+
+#### venv 创建虚拟环境
+
+```shell
+# 创建
+python3 -m venv <ENV_DIR>
+
+# 激活
+source <ENV_DIR>/bin/activate
+
+# 退出
+deactivate
+```

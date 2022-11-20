@@ -6,6 +6,11 @@ alias la='ls -A'
 alias ll='ls -CF'
 alias ls='ls --color=auto'
 
+alias py='python'
+alias ipy='ipython'
+alias av='source venv/bin/activate'
+alias dv='deactivate'
+
 # Proxy
 alias ep='export http_proxy=http://127.0.0.1:7890 && export https_proxy=https://127.0.0.1:7890 && export socks5_proxy=socks5://127.0.0.1:7891'
 alias up='unset http_proxy && unset https_proxy && unset socks5_proxy'
