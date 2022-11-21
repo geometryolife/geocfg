@@ -1,4 +1,5 @@
 alias i='cd $HOME/i'
+alias p='cd ~/prog'
 
 alias c='clear'
 alias l='ls --color=auto -lah'
