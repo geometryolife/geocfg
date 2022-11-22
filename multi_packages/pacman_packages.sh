@@ -7,6 +7,7 @@ dmenu
 firefox
 git
 i3
+neofetch
 openssh
 python
 python-pip
@@ -22,4 +23,3 @@ xorg
 xorg-server
 xorg-xinit
 xorg-xlsfonts
-neofetch
