@@ -17,3 +17,5 @@ export PATH=$HOME/.cargo/bin:$PATH
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+export RANGER_LOAD_DEFAULT_RC=False
