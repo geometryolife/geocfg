@@ -189,3 +189,14 @@ Python packaging and dependency management made easy.
 # 安装
 curl -sSL https://install.python-poetry.org | python3 -
 ```
+
+### Toml
+
+- 安装语言服务器
+  - [cannot be automatically formatted for Helix editor #337](https://github.com/tamasfe/taplo/issues/337)
+
+```shell
+# 目前编译默认不支持 lsp，需手动开启
+git clone https://github.com/tamasfe/taplo.git
+cargo install taplo-cli --locked --features lsp
+```
