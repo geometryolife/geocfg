@@ -79,6 +79,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```shell
 # 设置 http 代理
 git config --global http.proxy http://127.0.0.1:7890
+
+# 取消代理设置
+git config --global --unset http.proxy
 ```
 
 ### 终端设置代理
@@ -160,6 +163,17 @@ npm install -g
 - 在 `NODE_ENV` 被设置为 `production` 的情况下，可以使用 `--production=false` 来同时安装 `dependencies` 和 `devDependencies` 中的模块。
 
 - `npm run` 从包的 `scripts` 对象运行任意命令。
+
+#### yarn
+
+```shell
+# 查看设置
+yarn config list
+
+# 设置代理
+yarn config set proxy  http://username:password@server:port
+yarn config set https-proxy http://username:password@server:port
+```
 
 ### Python
 

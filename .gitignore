@@ -1,6 +1,8 @@
 coc/
+configstore/
 helix/
-lazygit/state.yml
+htoprc
 nvim/
 wslu/
-htoprc
+
+lazygit/state.yml
