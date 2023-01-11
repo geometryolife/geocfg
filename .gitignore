@@ -2,7 +2,9 @@ coc/
 configstore/
 helix/
 htoprc
+nvim.bak/
 nvim/
 wslu/
+yarn/
 
 lazygit/state.yml

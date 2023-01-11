@@ -25,3 +25,12 @@ cargo build --release
 # 把编译生成的软件包添加到 Path 环境变量，例如（根据实际路径添加）：
 C:\Users\geome\i\starcoin\target\release
 ```
+
+## Powershell
+
+### Proxy
+
+```powershell
+$env:http_proxy = "http://127.0.0.1:7890";
+$env:https_proxy = "http://127.0.0.1:7890";
+```
