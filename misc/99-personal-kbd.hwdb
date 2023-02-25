@@ -2,7 +2,7 @@
 # udevadm hwdb --update
 # udevadm trigger
 
-# Hasee PC
+# Laptop
 evdev:atkbd:dmi:*
  KEYBOARD_KEY_3a=leftctrl    # bind leftctrl to capslock
  KEYBOARD_KEY_1d=capslock    # bind capslock to leftctrl
