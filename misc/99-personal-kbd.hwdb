@@ -1,5 +1,5 @@
 # Path /etc/udev/hwdb.d/99-personal-kbd.hwdb
-# udevadm hwdb --update
+# systemd-hwdb update
 # udevadm trigger
 
 # Laptop
