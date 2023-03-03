@@ -2,7 +2,7 @@
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
 # Connect to the internet
-iwctl
+# iwctl
 
 # Retrieve and filter a list of the latest Arch Linux mirrors
 reflector --country China --age 24 --sort rate --protocol https --save /etc/pacman.d/mirrorlist
@@ -33,6 +33,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 # Install essential packages
 pacman -Sy
 pacstrap -K /mnt base base-devel linux linux-firmware vim grub efibootmgr networkmanager iwd dhcpcd intel-ucode sof-firmware alsa-utils pulseaudio pulseaudio-bluetooth cups man bash-completion
+pacstrap -K /mnt neovim git wget 
 # pacstrap -K /mnt linux-headers efivar
 pacstrap -K /mnt xorg wqy-microhei wqy-zenhei xf86-video-intel vulkan-intel mesa
 
@@ -44,7 +45,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # arch-chroot /mnt bash -c "timedatectl set-timezone Asia/Shanghai && timedatectl set-ntp true && exit"
 arch-chroot /mnt bash -c "ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && hwclock --systohc && sed -i 's/#en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen && locale-gen && echo 'LANG=en_US.UTF-8' > /etc/locale.conf && exit"
 
-arch-chroot /mnt bash -c "echo 'mx' > /etc/hostname && echo '127.0.0.1 localhost' >> /etc/hosts && echo '::1 localhost' >> /etc/hosts && echo '127.0.1.1 mx.localdomain mx' >> /etc/hosts && exit"
+# arch-chroot /mnt bash -c "echo 'mx' > /etc/hostname && echo '127.0.0.1 localhost' >> /etc/hosts && echo '::1 localhost' >> /etc/hosts && echo '127.0.1.1 mx.localdomain mx' >> /etc/hosts && exit"
+arch-chroot /mnt bash -c "echo 'mx' > /etc/hostname && echo -e '127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\tmx.localdomain\tmx' >> /etc/hosts && exit"
 
 arch-chroot /mnt bash -c "echo 'set root password' && passwd && useradd -m -G wheel joe && echo 'set joe password' && passwd joe && EDITOR=vim visudo && exit"
 
@@ -54,12 +56,13 @@ arch-chroot /mnt bash -c "echo '# Laptop' >> /etc/udev/hwdb.d/99-personal-kbd.hw
 
 arch-chroot /mnt bash -c "systemctl enable NetworkManager && systemctl enable iwd && exit"
 
-arch-chroot /mnt bash -c "echo 'export EDITOR=vim' >> /etc/skel/.bashrc && echo alias ls='ls --color=auto' >> /etc/skel/.bashrc && echo alias grep='grep --color=auto' >> /etc/skel/.bashrc && echo alias egrep='egrep --color=auto' >> /etc/skel/.bashrc && echo alias fgrep='fgrep --color=auto' >> /etc/skel/.bashrc && exit"
-arch-chroot /mnt bash -c "echo '[ ! -e ~/.dircolors ] && eval $(dircolors -p > ~/.dircolors)' >> /etc/skel/.bashrc && echo '[ -e /bin/dircolors ] && eval $(dircolors -b ~/.dircolors)' >> /etc/skel/.bashrc && cp -a /etc/skel/* ~ && exit"
+# arch-chroot /mnt bash -c "echo 'export EDITOR=vim' >> /etc/skel/.bashrc && echo alias ls='ls --color=auto' >> /etc/skel/.bashrc && echo alias grep='grep --color=auto' >> /etc/skel/.bashrc && echo alias egrep='egrep --color=auto' >> /etc/skel/.bashrc && echo alias fgrep='fgrep --color=auto' >> /etc/skel/.bashrc && exit"
+# arch-chroot /mnt bash -c "echo '[ ! -e ~/.dircolors ] && eval $(dircolors -p > ~/.dircolors)' >> /etc/skel/.bashrc && echo '[ -e /bin/dircolors ] && eval $(dircolors -b ~/.dircolors)' >> /etc/skel/.bashrc && cp -a /etc/skel/* ~ && exit"
+# arch-chroot /mnt bash -c "echo -e \"export EDITOR=vim\n\nalias ls='ls --color=auto'\nalias grep='grep --color=auto'\nalias egrep='egrep --color=auto'\nalias fgrep='fgrep --color=auto'\" >> /etc/skel/.bashrc && exit"
 
 arch-chroot /mnt bash -c "sed -i 's/#export/export/' /etc/profile.d/freetype2.sh && exit"
 
-umount -R /mnt
+# umount -R /mnt
 
 echo "Done!"
 
