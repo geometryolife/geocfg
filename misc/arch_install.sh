@@ -32,10 +32,12 @@ mount /dev/nvme0n1p1 /mnt/boot
 
 # Install essential packages
 pacman -Sy
-pacstrap -K /mnt base base-devel linux linux-firmware vim grub efibootmgr networkmanager iwd dhcpcd intel-ucode sof-firmware alsa-utils pulseaudio pulseaudio-bluetooth cups man bash-completion
-pacstrap -K /mnt neovim git wget 
+pacstrap -K /mnt base base-devel linux linux-firmware vim neovim grub efibootmgr networkmanager iwd dhcpcd sof-firmware alsa-utils pulseaudio pulseaudio-bluetooth cups man bash-completion git wget lazygit git-delta ranger neofetch
+pacstrap -K /mnt xorg wqy-microhei wqy-zenhei firefox
 # pacstrap -K /mnt linux-headers efivar
-pacstrap -K /mnt xorg wqy-microhei wqy-zenhei xf86-video-intel vulkan-intel mesa
+
+# For Intel
+pacstrap -K /mnt intel-ucode xf86-video-intel vulkan-intel mesa
 
 # Configure the system
 # Generate an fstab file
