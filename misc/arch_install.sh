@@ -1,3 +1,4 @@
+# wget https://raw.githubusercontent.com/geometryolife/geocfg/main/misc/arch_install.sh
 # Backup mirrorlist
 cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
@@ -18,14 +19,14 @@ fdisk /dev/nvme0n1
 
 # Format the partitions
 mkfs.fat -F 32 /dev/nvme0n1p1
-mkfs.ext4 /dev/nvme0n1p2
-mkswap /dev/nvme0n1p3
+mkswap /dev/nvme0n1p2
+mkfs.ext4 /dev/nvme0n1p3
 
 # Enable the swap
-swapon /dev/nvme0n1p3
+swapon /dev/nvme0n1p2
 
 # Mount the filesystem
-mount /dev/nvme0n1p2 /mnt
+mount /dev/nvme0n1p3 /mnt
 
 mkdir /mnt/boot
 mount /dev/nvme0n1p1 /mnt/boot
