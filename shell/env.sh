@@ -12,6 +12,7 @@ export PATH=$PATH:$LOCALPROG/bin
 export PATH=$PATH:$LOCALPROG/node/bin
 export PATH=$PATH:$LOCALPROG/go/bin
 export PATH=$PATH:$LOCALPROG/nvim/bin
+export PATH=$PATH:$LOCALPROG/clash
 
 export PATH=$HOME/.cargo/bin:$PATH
 
