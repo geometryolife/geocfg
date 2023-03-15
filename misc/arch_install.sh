@@ -46,7 +46,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 
 # Chroot
 # arch-chroot /mnt bash -c "timedatectl set-timezone Asia/Shanghai && timedatectl set-ntp true && exit"
-arch-chroot /mnt bash -c "ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && hwclock --systohc && sed -i 's/#en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen && locale-gen && echo 'LANG=en_US.UTF-8' > /etc/locale.conf && exit"
+arch-chroot /mnt bash -c "ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && hwclock --systohc && sed -i 's/#en_US.UTF-8/en_US.UTF-8/' /etc/locale.gen && locale-gen && echo 'LANG=en_US.UTF-8' > /etc/locale.conf && timedatectl set-ntp true && exit"
 
 # arch-chroot /mnt bash -c "echo 'mx' > /etc/hostname && echo '127.0.0.1 localhost' >> /etc/hosts && echo '::1 localhost' >> /etc/hosts && echo '127.0.1.1 mx.localdomain mx' >> /etc/hosts && exit"
 arch-chroot /mnt bash -c "echo 'mx' > /etc/hostname && echo -e '127.0.0.1\tlocalhost\n::1\t\tlocalhost\n127.0.1.1\tmx.localdomain\tmx' >> /etc/hosts && exit"
@@ -57,7 +57,7 @@ arch-chroot /mnt bash -c "grub-install --target=x86_64-efi --efi-directory=/boot
 
 arch-chroot /mnt bash -c "echo '# Laptop' >> /etc/udev/hwdb.d/99-personal-kbd.hwdb && echo 'evdev:atkbd:dmi:*' >> /etc/udev/hwdb.d/99-personal-kbd.hwdb && echo ' KEYBOARD_KEY_3a=leftctrl' >> /etc/udev/hwdb.d/99-personal-kbd.hwdb && echo ' KEYBOARD_KEY_1d=capslock' >> /etc/udev/hwdb.d/99-personal-kbd.hwdb && systemd-hwdb update && udevadm trigger && exit"
 
-arch-chroot /mnt bash -c "systemctl enable NetworkManager && systemctl enable iwd && exit"
+arch-chroot /mnt bash -c "systemctl enable NetworkManager && systemctl enable iwd && systemctl enable dhcpcd && exit"
 
 # arch-chroot /mnt bash -c "echo 'export EDITOR=vim' >> /etc/skel/.bashrc && echo alias ls='ls --color=auto' >> /etc/skel/.bashrc && echo alias grep='grep --color=auto' >> /etc/skel/.bashrc && echo alias egrep='egrep --color=auto' >> /etc/skel/.bashrc && echo alias fgrep='fgrep --color=auto' >> /etc/skel/.bashrc && exit"
 # arch-chroot /mnt bash -c "echo '[ ! -e ~/.dircolors ] && eval $(dircolors -p > ~/.dircolors)' >> /etc/skel/.bashrc && echo '[ -e /bin/dircolors ] && eval $(dircolors -b ~/.dircolors)' >> /etc/skel/.bashrc && cp -a /etc/skel/* ~ && exit"
@@ -73,3 +73,7 @@ echo "Done!"
 # vim /etc/default/grub
 # Modify => GRUB_CMDLINE_LINUX="i915.enable_psr=0"
 # grub-mkconfig -o /boot/grub/grub.cfg
+
+# Clash
+# wget https://github.com/Dreamacro/clash/releases/download/v1.13.0/clash-linux-amd64-v1.13.0.gz
+# mkdir ~/.config/clash && cd clash && wget -O config.yaml "https://api.sub-100.one/link/gTWyw9hfALzBxzlD?clash=3"
