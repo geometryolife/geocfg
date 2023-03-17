@@ -36,8 +36,9 @@ mount /dev/nvme0n1p1 /mnt/boot
 
 # Install essential packages
 pacman -Sy
-pacstrap -K /mnt base base-devel linux linux-firmware vim neovim grub efibootmgr networkmanager iwd dhcpcd sof-firmware alsa-utils pulseaudio pulseaudio-bluetooth cups man bash-completion git wget lazygit git-delta ranger neofetch
-pacstrap -K /mnt xorg xorg-xinit feh udisks2 udiskie pcmanfm wqy-microhei wqy-zenhei firefox archlinux-wallpaper
+pacstrap -K /mnt base base-devel linux linux-firmware vim neovim grub efibootmgr networkmanager iwd dhcpcd sof-firmware alsa-utils pulseaudio pulseaudio-bluetooth cups man bash-completion git wget lazygit git-delta ranger neofetch htop zip unzip cmake
+pacstrap -K /mnt xorg xorg-xinit feh udisks2 udiskie pcmanfm wqy-microhei wqy-zenhei firefox archlinux-wallpaper fcitx5-im fcitx5-chinese-addons fcitx5-nord fcitx5-pinyin-zhwiki python-pip xclip
+pacstrap -K /mnt libev uthash libconfig
 # pacstrap -K /mnt linux-headers efivar
 
 # For Intel
@@ -84,3 +85,18 @@ echo "Done!"
 # Normal user
 # cp /etc/X11/xinit/xinitrc ~/.xinitrc
 # Modify => exec dwm
+# vim ~/.Xresources
+# Modify => Xft.dpi: 200
+
+# suckless.org
+# git clone https://git.suckless.org/dwm
+# git clone https://git.suckless.org/st
+# git clone https://git.suckless.org/dmenu
+
+# AUR Helpers - paru
+# git clone https://aur.archlinux.org/paru.git
+# sudo vim /etc/makepkg.conf
+# Modify => MAKEFLAGS="-j$(nproc)"
+# makepkg -si
+# sudo vim /etc/paru.conf
+# Modify => BottomUp
