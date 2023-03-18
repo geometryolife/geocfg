@@ -13,6 +13,7 @@ export PATH=$PATH:$LOCALPROG/node/bin
 export PATH=$PATH:$LOCALPROG/go/bin
 export PATH=$PATH:$LOCALPROG/nvim/bin
 export PATH=$PATH:$LOCALPROG/clash
+export PATH=$PATH:$LOCALPROG/picom/bin
 
 export PATH=$HOME/.cargo/bin:$PATH
 

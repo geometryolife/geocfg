@@ -1,6 +1,9 @@
+alias h='cd'
 alias i='cd $HOME/i'
 alias o='cd ~/other'
 alias p='cd ~/prog'
+
+alias m='make clean install'
 
 alias c='clear'
 alias l='ls --color=auto -lah'
