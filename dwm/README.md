@@ -46,3 +46,12 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+Keymappings
+-----------
+
+`Mod + Enter` => Terminal
+`Mod + Num` => Switch tabs
+
+`Mod + 0` => Combine all tabs
+`Mod + Ctrl + Num` => Combine tabs
