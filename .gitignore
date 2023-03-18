@@ -2,8 +2,6 @@ clash/
 coc/
 configstore/
 dconf/
-dmenu/
-dwm/
 evolution/
 fcitx/
 fcitx5/
@@ -16,7 +14,6 @@ Kingsoft/
 nvim.bak/
 nvim/
 pulse/
-st/
 wslu/
 yarn/
 
