@@ -208,6 +208,7 @@ static void tdefutf8(char);
 static int32_t tdefcolor(const int *, int *, int);
 static void tdeftran(char);
 static void tstrsequence(uchar);
+static const char *findlastany(const char *, const char**, size_t);
 
 static void drawregion(int, int, int, int);
 
@@ -2736,4 +2737,85 @@ redraw(void)
 {
 	tfulldirt();
 	draw();
+}
+
+const char *
+findlastany(const char *str, const char**find, size_t len)
+{
+	const char *found = NULL;
+	int i = 0;
+
+	for (found = str + strlen(str) - 1; found >= str; --found) {
+		for(i = 0; i < len; i++) {
+			if (strncmp(found, find[i], strlen(find[i])) == 0) {
+				return found;
+			}
+		}
+	}
+
+	return NULL;
+}
+
+/*
+** Select and copy the previous url on screen (do nothing if there's no url).
+**
+** FIXME: doesn't handle urls that span multiple lines; will need to add support
+**        for multiline "getsel()" first
+*/
+void
+copyurl(const Arg *arg) {
+	/* () and [] can appear in urls, but excluding them here will reduce false
+	 * positives when figuring out where a given url ends.
+	 */
+	static const char URLCHARS[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		"abcdefghijklmnopqrstuvwxyz"
+		"0123456789-._~:/?#@!$&'*+,;=%";
+
+	static const char* URLSTRINGS[] = {"http://", "https://"};
+
+	int row = 0, /* row of current URL */
+		col = 0, /* column of current URL start */
+		colend = 0, /* column of last occurrence */
+		passes = 0; /* how many rows have been scanned */
+
+	char linestr[term.col + 1];
+	const char *c = NULL,
+		 *match = NULL;
+
+	row = (sel.ob.x >= 0 && sel.nb.y > 0) ? sel.nb.y : term.bot;
+	LIMIT(row, term.top, term.bot);
+
+	colend = (sel.ob.x >= 0 && sel.nb.y > 0) ? sel.nb.x : term.col;
+	LIMIT(colend, 0, term.col);
+
+	/*
+	** Scan from (term.row - 1,term.col - 1) to (0,0) and find
+	** next occurrance of a URL
+	*/
+	for (passes = 0; passes < term.row; passes++) {
+		/* Read in each column of every row until
+		** we hit previous occurrence of URL
+		*/
+		for (col = 0; col < colend; ++col)
+			linestr[col] = term.line[row][col].u < 128 ? term.line[row][col].u : ' ';
+		linestr[col] = '\0';
+
+		if ((match = findlastany(linestr, URLSTRINGS,
+						sizeof(URLSTRINGS)/sizeof(URLSTRINGS[0]))))
+			break;
+
+		if (--row < 0)
+			row = term.row - 1;
+
+		colend = term.col;
+	};
+
+	if (match) {
+		size_t l = strspn(match, URLCHARS);
+		selstart(match - linestr, row, 0);
+		selextend(match - linestr + l - 1, row, SEL_REGULAR, 0);
+		selextend(match - linestr + l - 1, row, SEL_REGULAR, 1);
+		xsetsel(getsel());
+		xclipcopy();
+	}
 }
