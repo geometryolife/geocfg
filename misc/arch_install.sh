@@ -37,7 +37,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 # Install essential packages
 pacman -Sy
 pacstrap -K /mnt base base-devel linux linux-firmware vim neovim grub efibootmgr networkmanager iwd dhcpcd sof-firmware alsa-utils pulseaudio pulseaudio-bluetooth cups man bash-completion git wget lazygit git-delta ranger neofetch htop zip unzip cmake
-pacstrap -K /mnt xorg xorg-xinit feh udisks2 udiskie pcmanfm wqy-microhei wqy-zenhei firefox archlinux-wallpaper fcitx5-im fcitx5-chinese-addons fcitx5-nord fcitx5-pinyin-zhwiki python-pip xclip
+pacstrap -K /mnt xorg xorg-xinit feh udisks2 udiskie pcmanfm wqy-microhei wqy-zenhei firefox archlinux-wallpaper fcitx5-im fcitx5-chinese-addons fcitx5-nord fcitx5-pinyin-zhwiki python-pip xclip pandoc-cli
 pacstrap -K /mnt libev uthash libconfig
 # pacstrap -K /mnt linux-headers efivar
 
