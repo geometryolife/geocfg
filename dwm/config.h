@@ -60,9 +60,18 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
+// static const char *voltoggle[] = { "$DWM/scripts/voltoggle.sh", NULL };
+// static const char *voldown[] = { "$DWM/scripts/voldown.sh", NULL };
+// static const char *volup[] = { "$DWM/scripts/volup.sh", NULL };
+static const char *voltoggle[] = { "/home/joe/.config/dwm/scripts/voltoggle.sh", NULL };
+static const char *voldown[] = { "/home/joe/.config/dwm/scripts/voldown.sh", NULL };
+static const char *volup[] = { "/home/joe/.config/dwm/scripts/volup.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_F1,     spawn,          {.v = voltoggle } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = voldown } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = volup } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
