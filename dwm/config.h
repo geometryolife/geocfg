@@ -66,12 +66,16 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *voltoggle[] = { "/home/joe/.config/dwm/scripts/voltoggle.sh", NULL };
 static const char *voldown[] = { "/home/joe/.config/dwm/scripts/voldown.sh", NULL };
 static const char *volup[] = { "/home/joe/.config/dwm/scripts/volup.sh", NULL };
+static const char *lightdown[] = { "/home/joe/.config/dwm/scripts/lightdown.sh", NULL };
+static const char *lightup[] = { "/home/joe/.config/dwm/scripts/lightup.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_F1,     spawn,          {.v = voltoggle } },
 	{ MODKEY,                       XK_F2,     spawn,          {.v = voldown } },
 	{ MODKEY,                       XK_F3,     spawn,          {.v = volup } },
+	{ MODKEY,                       XK_F5,     spawn,          {.v = lightdown } },
+	{ MODKEY,                       XK_F6,     spawn,          {.v = lightup } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
