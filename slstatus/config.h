@@ -66,10 +66,15 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
     { run_command, "󰣇 %s |", "uname -r | awk -F '-' '{print $1}'" },
-    { disk_free, " %s |", "/" },
+    // { disk_free, " %s |", "/" },
+    { disk_free, "🖥 %s |", "/" },
     { cpu_perc, "󰘚 %s%% |", NULL },
-    { ram_perc, "󰍛 %s%% |", NULL },
-    { run_command, " %s |", "amixer sget Master | awk -F '[][]' '/Left:/{print $2}'" },
-    { run_command, "󰍬 %s | ", "amixer sget Capture | awk -F '[][]' '/Left:/{print $2}'" },
-	{ datetime, "%s",           "%F %T" },
+    // { ram_perc, "󰍛 %s%% |", NULL },
+    { ram_perc, "💾 %s%% |", NULL },
+    // { run_command, " %s |", "amixer sget Master | awk -F '[][]' '/Left:/{print $2}'" },
+    { run_command, "🔊 %s |", "amixer sget Master | awk -F '[][]' '/Left:/{print $2}'" },
+    // { run_command, "󰍬 %s | ", "amixer sget Capture | awk -F '[][]' '/Left:/{print $2}'" },
+    { run_command, "🎙 %s | ", "amixer sget Capture | awk -F '[][]' '/Left:/{print $2}'" },
+    // { datetime, "%s",           "%F %T" },
+	{ datetime, "%s",           "📅 %F ⏰ %T" },
 };
