@@ -164,6 +164,16 @@ npm install -g
 
 - `npm run` 从包的 `scripts` 对象运行任意命令。
 
+```shell
+# 查看用户配置和全局配置文件
+npm config get userconfig
+npm config get globalconfig
+
+# 设置
+npm config set proxy http://127.0.0.1:7890
+npm config set https-proxy http://127.0.0.1:7890
+```
+
 #### yarn
 
 ```shell
