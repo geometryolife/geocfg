@@ -42,7 +42,9 @@ pacstrap -K /mnt libev uthash libconfig
 # pacstrap -K /mnt linux-headers efivar
 
 # For Intel
-pacstrap -K /mnt intel-ucode xf86-video-intel vulkan-intel mesa
+pacstrap -K /mnt intel-ucode vulkan-intel mesa
+# xf86-video-intel NOT suitable for new machines
+# See https://wiki.archlinux.org/title/Intel_graphics
 
 # Configure the system
 # Generate an fstab file
