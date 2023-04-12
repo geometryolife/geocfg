@@ -82,6 +82,11 @@ bindsym $mod+Shift+s exec killall screenkey
 bindsym $mod+t exec pcmanfm
 bindsym $mod+i exec --no-startup-id pkill picom
 bindsym $mod+Shift+i exec --no-startup-id picom
+bindsym $mod+s exec emacs
+
+# change wallpapers
+bindsym $mod+b exec variety -n
+bindsym $mod+Shift+b exec variety -p
 
 # change focus
 bindsym $mod+h focus left
@@ -117,7 +122,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+Shift+d layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -132,6 +137,8 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+
+bindsym $mod+x [urgent=latest] focus
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -209,3 +216,5 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+bindsym $mod+m bar mode toggle
