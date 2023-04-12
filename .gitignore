@@ -1,3 +1,4 @@
+autostart/
 clash/
 coc/
 configstore/
@@ -11,10 +12,13 @@ helix/
 htoprc
 ibus/
 Kingsoft/
+libfm/
 nvim.bak/
 nvim/
+pcmanfm/
 pulse/
 totem/
+variety/
 wslu/
 yarn/
 

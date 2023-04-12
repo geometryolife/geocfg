@@ -1,3 +1,4 @@
+# export EDITOR=hx
 export EDITOR=nvim
 export HELIX_RUNTIME="$HOME/i/helix/runtime"
 
@@ -14,6 +15,7 @@ export PATH=$PATH:$LOCALPROG/go/bin
 export PATH=$PATH:$LOCALPROG/nvim/bin
 export PATH=$PATH:$LOCALPROG/clash
 export PATH=$PATH:$LOCALPROG/picom/bin
+export PATH=$PATH:$LOCALPROG/telegram
 
 export PATH=$HOME/.cargo/bin:$PATH
 
