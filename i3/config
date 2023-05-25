@@ -84,6 +84,7 @@ bindsym $mod+t exec pcmanfm
 bindsym $mod+i exec --no-startup-id pkill picom
 bindsym $mod+Shift+i exec --no-startup-id picom
 bindsym $mod+s exec emacs
+bindsym $mod+z exec --no-startup-id flameshot gui
 
 # change wallpapers
 bindsym $mod+b exec variety -n
