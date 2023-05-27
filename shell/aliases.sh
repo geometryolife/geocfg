@@ -27,6 +27,7 @@ alias n='neofetch'
 
 # Editor
 alias vi='nvim'
+alias lv='lvim'
 alias e='emacs -nw'
 alias ee='emacs'
 alias em='emacs -Q -l ~/.emacs.d/init-mini.el'
