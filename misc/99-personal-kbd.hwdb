@@ -11,3 +11,8 @@ evdev:atkbd:dmi:*
 evdev:input:b0005v*
  KEYBOARD_KEY_70039=leftctrl    # bind leftctrl to capslock
  KEYBOARD_KEY_700e0=capslock    # bind capslock to leftctrl
+
+# USB Keyboard
+evdev:input:b0003v*
+ KEYBOARD_KEY_70039=leftctrl    # bind leftctrl to capslock
+ KEYBOARD_KEY_700E0=capslock    # bind capslock to leftctrl
