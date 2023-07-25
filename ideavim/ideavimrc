@@ -1,0 +1,13 @@
+noremap s <Nop>
+
+nnoremap <Space>w :w<CR>
+nnoremap <Space>q :q<CR>
+nnoremap S :w<CR>
+nnoremap Q :q<CR>
+nnoremap si :wq<CR>
+nnoremap sc :e ~/.config/ideavim/ideavimrc<CR>
+
+noremap K 5k
+noremap J 5j
+noremap H 0
+noremap L $
