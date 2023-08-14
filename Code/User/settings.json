@@ -150,4 +150,7 @@
     // VSCode Settings
     "workbench.colorTheme": "Default Dark+",
     "files.autoSave": "afterDelay"
+{
+    "workbench.colorTheme": "Quiet Light",
+    "editor.fontFamily": "'Source Code Pro', 'monospace', monospace"
 }
