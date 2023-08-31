@@ -1,6 +1,8 @@
 autostart/
 clash/
 coc/
+Code/
+!Code/User
 configstore/
 dconf/
 doom/
@@ -16,6 +18,7 @@ htoprc
 ibus/
 Kingsoft/
 libfm/
+lvim/
 nextjs-nodejs/
 nvim.bak/
 nvim/
@@ -27,6 +30,7 @@ totem/
 variety/
 wslu/
 yarn/
+
 
 .gsd-keyboard.settings-ported
 dleyna-renderer-service.conf

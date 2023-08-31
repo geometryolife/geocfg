@@ -84,6 +84,7 @@ alias glgp='git log --stat -p'
 alias glo='git log --oneline --decorate'
 alias glog='git log --oneline --decorate --graph'
 alias gloga='git log --oneline --decorate --graph --all'
+alias glods='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset **%s** %Cgreen(%ad) %C(bold blue)@%an%Creset" --date=short'
 
 alias gm='git merge'
 

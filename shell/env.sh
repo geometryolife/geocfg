@@ -1,5 +1,6 @@
 # export EDITOR=hx
-export EDITOR=nvim
+# export EDITOR=nvim
+export EDITOR=lvim
 export HELIX_RUNTIME="$HOME/i/helix/runtime"
 
 export PATH=$HOME/.local/bin:$PATH
@@ -18,6 +19,10 @@ export PATH=$PATH:$LOCALPROG/picom/bin
 export PATH=$PATH:$LOCALPROG/telegram
 
 export PATH=$HOME/.cargo/bin:$PATH
+export CMAKE_PREFIX_PATH=/home/joe/prog/llvm-project-16/build-release
+export CLANG_INCLUDE_DIRS=/home/joe/prog/llvm-project-16/build-release/bin
+export PATH=$CLANG_INCLUDE_DIRS:$PATH
+# export PATH=$CMAKE_PREFIX_PATH:$PATH
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
