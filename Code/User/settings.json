@@ -154,5 +154,8 @@
     "workbench.colorTheme": "Quiet Light",
     "editor.fontFamily": "'Source Code Pro', 'monospace', monospace",
     "http.proxy": "http://127.0.0.1:7890",
-    "commentTranslate.targetLanguage": "zh-CN"
+    "commentTranslate.targetLanguage": "zh-CN",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
