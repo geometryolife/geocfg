@@ -23,3 +23,7 @@ noremap <C-p> <C-y>
 noremap <C-n> <C-e>
 noremap <C-M-p> 5<C-y>
 noremap <C-M-n> 5<C-n>
+
+" Switch to previous/next buffer
+nnoremap sk :bprevious<CR>
+nnoremap sj :bnext<CR>
