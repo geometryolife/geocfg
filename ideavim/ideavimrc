@@ -27,3 +27,6 @@ noremap <C-M-n> 5<C-n>
 " Switch to previous/next buffer
 nnoremap sk :bprevious<CR>
 nnoremap sj :bnext<CR>
+
+" Toggle wrap and unwrap
+nnoremap sw :action EditorToggleUseSoftWraps<CR>
