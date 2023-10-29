@@ -1,0 +1,10 @@
+<keymap version="1" name="geoXWin" parent="Default for XWin">
+  <action id="EditorCodeBlockStart" />
+  <action id="FocusEditor">
+    <keyboard-shortcut first-keystroke="escape" />
+    <keyboard-shortcut first-keystroke="ctrl open_bracket" />
+  </action>
+  <action id="Terminal.SwitchFocusToEditor">
+    <keyboard-shortcut first-keystroke="ctrl open_bracket" />
+  </action>
+</keymap>
