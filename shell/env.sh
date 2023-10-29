@@ -17,6 +17,7 @@ export PATH=$PATH:$LOCALPROG/nvim/bin
 export PATH=$PATH:$LOCALPROG/clash
 export PATH=$PATH:$LOCALPROG/picom/bin
 export PATH=$PATH:$LOCALPROG/telegram
+export PATH=$PATH:$LOCALPROG/idea/bin
 
 export PATH=$HOME/.cargo/bin:$PATH
 export CMAKE_PREFIX_PATH=/home/joe/prog/llvm-project-16/build-release
