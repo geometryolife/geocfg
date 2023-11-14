@@ -1,4 +1,5 @@
 ﻿#z::Run "https://www.autohotkey.com"  ; Win+Z
+#^g::Run "https://github.com"
 
 ^!n::  ; Ctrl+Alt+N
 {
@@ -46,3 +47,10 @@ RAlt & o::ShiftAltTab
 ^a::home
 ^e::end
 ^m::enter
+
+; Powershell using Linux keymaps
+#HotIf WinActive("Windows PowerShell")
+^u::^home
+^k::^end
+^w::^BS
+#HotIf
