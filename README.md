@@ -2,6 +2,13 @@
 
 This is geometryolife’s configuration.
 
+## Git
+
+```shell
+git config --global user.name "Joe Chen"
+git config --global user.email "geometryolife@gmail.com"
+```
+
 ## Editor
 
 ### Helix
