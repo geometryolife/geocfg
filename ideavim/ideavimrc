@@ -30,3 +30,4 @@ nnoremap sj :bnext<CR>
 
 " Toggle wrap and unwrap
 nnoremap sw :action EditorToggleUseSoftWraps<CR>
+nnoremap sl :action ActivateTerminalToolWindow<CR>

@@ -20,3 +20,7 @@ Host github.com
 ```
 
 此时 SSH 就可以通过 `443` 端口访问了，而不是原来的 `22` 端口。
+
+参考链接：
+
+- [Using SSH over the HTTPS port](https://docs.github.com/en/authentication/troubleshooting-ssh/using-ssh-over-the-https-port)
