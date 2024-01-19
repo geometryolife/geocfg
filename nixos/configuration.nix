@@ -76,6 +76,12 @@
   ];
 
   environment.variables.EDITOR = "vim";
+  programs.bash = {
+    shellAliases = {
+      ep = "export http_proxy=http://127.0.0.1:7890 && export https_proxy=http://127.0.0.1:7890 && export socks5_proxy=socks5://127.0.0.1:7891";
+      up = "unset http_proxy && unset https_proxy && unset socks5_proxy";
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
