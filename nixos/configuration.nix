@@ -58,6 +58,8 @@
     #];
     packages = with pkgs; [];
   };
+  # 启用 Nix Flakes 功能，以及配套的新 nix-command 命令行工具
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -72,6 +74,8 @@
     ranger
     lazygit
   ];
+
+  environment.variables.EDITOR = "vim";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
