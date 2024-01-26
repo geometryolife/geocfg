@@ -60,9 +60,10 @@
     #];
     packages = with pkgs; [];
   };
-  home-manager.users.joe = { pkgs, ... }: {
-    home.packages = [ pkgs.atool pkgs.httpie ];
-    home.stateVersion = "23.05";
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.joe = import ./home.nix;
   };
   # 启用 Nix Flakes 功能，以及配套的新 nix-command 命令行工具
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
