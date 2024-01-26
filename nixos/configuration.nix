@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      <home-manager/nixos>
     ];
 
   # Bootloader.
@@ -20,6 +21,7 @@
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  networking.proxy.default = "http://127.0.0.1:7890";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -57,6 +59,10 @@
       # replace with your own public key
     #];
     packages = with pkgs; [];
+  };
+  home-manager.users.joe = { pkgs, ... }: {
+    home.packages = [ pkgs.atool pkgs.httpie ];
+    home.stateVersion = "23.05";
   };
   # 启用 Nix Flakes 功能，以及配套的新 nix-command 命令行工具
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
