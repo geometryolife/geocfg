@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      <home-manager/nixos>
     ];
 
   # Bootloader.
@@ -60,11 +59,7 @@
     #];
     packages = with pkgs; [];
   };
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users.joe = import ./home.nix;
-  };
+
   # 启用 Nix Flakes 功能，以及配套的新 nix-command 命令行工具
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
