@@ -10,7 +10,7 @@
       theme = "dst";
     };
     initExtra = ''
-      bindkey '^f' autosuggest-accept
+      #bindkey '^f' autosuggest-accept
     '';
   };
 
