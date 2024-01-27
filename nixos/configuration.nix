@@ -80,6 +80,10 @@
     git
     ranger
     lazygit
+    google-chrome
+    kitty
+    alacritty
+    xorg.xev
   ];
 
   environment.variables.EDITOR = "vim";
