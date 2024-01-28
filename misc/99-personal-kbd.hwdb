@@ -1,6 +1,7 @@
 # Path /etc/udev/hwdb.d/99-personal-kbd.hwdb
 # systemd-hwdb update
 # udevadm trigger
+# sudo ln -s /home/joe/geocfg/misc/99-personal-kbd.hwdb /etc/udev/hwdb.d
 
 # Laptop
 evdev:atkbd:dmi:*
