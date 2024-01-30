@@ -3,8 +3,10 @@
     enable = true;
     enableCompletion = true;
     enableAutosuggestions = true;
-    #enableSyntaxHighlighting = true;
     syntaxHighlighting.enable = true;
+    shellAliases = {
+      e2c = "sudo systemd-hwdb update && sudo udevadm trigger";
+    };
     oh-my-zsh = {
       enable = true;
       plugins = [ "docker-compose" "docker" ];
