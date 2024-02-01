@@ -84,6 +84,8 @@
     kitty
     alacritty
     xorg.xev
+    libsForQt5.dolphin
+    wofi
   ];
 
   environment.variables.EDITOR = "vim";
