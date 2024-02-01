@@ -86,6 +86,8 @@
     xorg.xev
     libsForQt5.dolphin
     wofi
+    waybar
+    neofetch
   ];
 
   environment.variables.EDITOR = "vim";
