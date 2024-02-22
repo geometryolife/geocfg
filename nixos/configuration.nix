@@ -42,6 +42,12 @@
     LC_TELEPHONE = "zh_CN.UTF-8";
     LC_TIME = "zh_CN.UTF-8";
   };
+  fonts = {
+    fontDir.enable = true;
+    packages = with pkgs; [
+      nerdfonts
+    ];
+  };
 
   # Configure keymap in X11
   services.xserver = {
