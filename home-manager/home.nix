@@ -23,6 +23,7 @@
   # environment.
   home.packages = [
     pkgs.htop
+    pkgs.breeze-icons
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
