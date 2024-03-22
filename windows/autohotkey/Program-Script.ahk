@@ -31,11 +31,12 @@ RAlt & k::ShiftAltTab
 RAlt & i::AltTab
 RAlt & o::ShiftAltTab
 
-; RAlt-Tab 实现 Windows 中 Win-Tab 的功能
-;^a::#Tab
+; 切换上一个/下一个虚拟桌面
+#+h::#^left
+#+l::#^right
 
-; 让 Win+Shift+Tab 执行原 Win+Tab 的功能
-;~#+Tab::#Tab
+; 让 Win+\ 执行原 Win+Tab 的功能
+#\::#Tab
 
 ; 让 Win+Tab 执行 AltTab 的功能
 <#Tab::AltTab
