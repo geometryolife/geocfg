@@ -1,9 +1,11 @@
-﻿; 交换 Ctrl 和 CapsLock
-CapsLock::Ctrl
-Ctrl::CapsLock
-
+﻿
 #z::Run "https://www.autohotkey.com"  ; Win+Z
 #^g::Run "https://github.com"
+
+; 交换 Ctrl 和 CapsLock
+; 这种改键位方式基于软件，相比于修改注册表，会出现间歇性停止工作的问题，无法达到无缝交换
+; CapsLock::Ctrl
+; Ctrl::CapsLock
 
 ^!n::  ; Ctrl+Alt+N
 {
@@ -31,6 +33,11 @@ RAlt & k::ShiftAltTab
 RAlt & i::AltTab
 RAlt & o::ShiftAltTab
 
+; Win + Tab：打开任务视图
+; Win + Ctrl + D：新建虚拟桌面
+; Win + Ctrl + F4：关闭虚拟桌面
+; Win + Ctrl + 右方向键：下一个虚拟桌面
+; Win + Ctrl + 左方向键：上一个虚拟桌面
 ; 切换上一个/下一个虚拟桌面
 #+h::#^left
 #+l::#^right
