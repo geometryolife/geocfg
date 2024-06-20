@@ -1,11 +1,9 @@
-﻿
+﻿; 交换 Ctrl 和 CapsLock
+CapsLock::Ctrl
+Ctrl::CapsLock
+
 #z::Run "https://www.autohotkey.com"  ; Win+Z
 #^g::Run "https://github.com"
-
-; 交换 Ctrl 和 CapsLock
-; 这种改键位方式基于软件，相比于修改注册表，会出现间歇性停止工作的问题，无法达到无缝交换
-; CapsLock::Ctrl
-; Ctrl::CapsLock
 
 ^!n::  ; Ctrl+Alt+N
 {
