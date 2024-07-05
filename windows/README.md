@@ -34,3 +34,11 @@ C:\Users\geome\i\starcoin\target\release
 $env:http_proxy = "http://127.0.0.1:7890";
 $env:https_proxy = "http://127.0.0.1:7890";
 ```
+
+## 创建软连接
+
+给 VSCode 的配置文件创建一个软连接
+
+```cmd
+mklink C:\Users\geome\AppData\Roaming\Code\User\settings.json C:\Users\geome\i\geocfg\windows\Code\User\settings.json
+```
