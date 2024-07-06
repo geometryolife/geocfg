@@ -7,6 +7,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "prettier.printWidth": 120
   },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "vim.leader": "<space>",
   "vim.commandLineModeKeyBindings": [],
   "vim.insertModeKeyBindings": [
