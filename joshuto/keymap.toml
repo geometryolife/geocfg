@@ -58,6 +58,8 @@ keymap = [
   { keys = ["G"], commands = ["cursor_move_end"] },
   { keys = ["r"], commands = ["open_with"] },
 
+  { keys = ["J"], commands = ["cursor_move_down 5"] },
+  { keys = ["K"], commands = ["cursor_move_up 5"] },
   { keys = ["H"], commands = ["cursor_move_page_home"] },
   { keys = ["L"], commands = ["cursor_move_page_middle"] },
   { keys = ["M"], commands = ["cursor_move_page_end"] },
@@ -128,6 +130,10 @@ keymap = [
 
   { keys = ["g", "r"], commands = ["cd /"] },
   { keys = ["g", "c"], commands = ["cd ~/.config"] },
+  { keys = ["g", "f", "f"], commands = ["cd ~/.config"] },
+  { keys = ["g", "i"], commands = ["cd ~/i"] },
+  { keys = ["g", "p"], commands = ["cd ~/prog"] },
+  { keys = ["g", "o"], commands = ["cd ~/other"] },
   { keys = ["g", "d"], commands = ["cd ~/Downloads"] },
   { keys = ["g", "e"], commands = ["cd /etc"] },
   { keys = ["g", "h"], commands = ["cd ~/"] },
