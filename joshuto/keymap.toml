@@ -91,6 +91,7 @@ keymap = [
   { keys = ["f", "t"], commands = [":touch "] },
 
   { keys = [" "], commands = ["select --toggle=true"] },
+  { keys = ["v"], commands = ["select --all=true --toggle=true"] },
   { keys = ["t"], commands = ["select --all=true --toggle=true"] },
   { keys = ["V"], commands = ["toggle_visual"] },
 
@@ -131,6 +132,7 @@ keymap = [
   { keys = ["g", "r"], commands = ["cd /"] },
   { keys = ["g", "c"], commands = ["cd ~/.config"] },
   { keys = ["g", "f", "f"], commands = ["cd ~/.config"] },
+  { keys = ["g", "f", "j"], commands = ["cd ~/.config/joshuto"] },
   { keys = ["g", "i"], commands = ["cd ~/i"] },
   { keys = ["g", "p"], commands = ["cd ~/prog"] },
   { keys = ["g", "o"], commands = ["cd ~/other"] },

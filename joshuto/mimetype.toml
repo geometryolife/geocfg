@@ -32,6 +32,8 @@ video_default = [
 ]
 
 text_default = [
+  { command = "vim" },
+  { command = "hx" },
   { command = "micro" },
   { command = "gedit", fork = true, silent = true },
   { command = "bat", args = [
