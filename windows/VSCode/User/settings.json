@@ -11,6 +11,10 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
     // "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "http.proxy": "http://127.0.0.1:7890",
   "vim.leader": "<space>",
   "vim.commandLineModeKeyBindings": [],
   "vim.insertModeKeyBindings": [

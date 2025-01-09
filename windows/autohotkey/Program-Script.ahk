@@ -1,6 +1,6 @@
 ﻿; 交换 Ctrl 和 CapsLock
-CapsLock::Ctrl
-Ctrl::CapsLock
+; CapsLock::Ctrl
+; Ctrl::CapsLock
 
 #z::Run "https://www.autohotkey.com"  ; Win+Z
 #^g::Run "https://github.com"
